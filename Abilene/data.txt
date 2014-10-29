@@ -1,0 +1,16 @@
+; Abilene network
+
+11  Seattle Denver Kansas Indianapolis Chicago NewYork Washington Atlanta Houston LosAngeles Sunnyvale
+;11 1   2   3   4   5   6   7   8   9   10    11
+   0 2095   0   0   0   0   0   0   0   0    856
+        0  639  0   0   0   0   0   0   0   1295
+		    0  548  0   0   0   0 902   0      0
+			    0   260 0   0   587 0   0      0
+				    0 700   0   0   0   0      0
+                        0 233   0   0   0      0
+						    0 846   0   0      0
+							    0 1176  0      0
+								    0   1893   0
+									    0    366
+										       0
+	
