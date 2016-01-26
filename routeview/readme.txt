@@ -13,3 +13,4 @@ bunzip2 rib.20160101.0000.bz2
 bgpdump -M rib.20160101.0000 > rib.20160101.0000.M.txt
 
 2. extract the rib file
+./RouteViewData.py -r rib.20160123.1600.M.txt 

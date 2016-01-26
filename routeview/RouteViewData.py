@@ -115,7 +115,7 @@ def genRibFileWithNHop(ifile,ofile=None,start=0,end=0):
 
 def Usage():
     print("Usage: %s -p | -r " %(sys.argv[0]))
-    print("\t -p ifile [ofile] : calculate the prefix number.")
+    print("\t -p ifile [ofile] : calculate the prefix number from the rib file.")
     print("\t -r ifile [ofile] : generate rib file from output using bgpdum with -M flags.")
     print("\t -n ifile ofile start end: generate rib file with random nexthop from bgpdum with -M flags file.")
     print("")
