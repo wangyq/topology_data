@@ -104,10 +104,20 @@ def calcPrefix(ifile,ofile=None):
     r.calcPrefixV6()
     pass
 
+def genRibFile(ifile,ofile=None):
+    r = RouteViewData(ifile,ofile)
+    r.saveRibFileNexthop()
+    pass
+def genRibFileWithNHop(ifile,ofile=None,start=0,end=0):
+    r = RouteViewData(ifile,ofile)
+    r.saveRibFileNexthop(start,end)
+    pass
+
 def Usage():
     print("Usage: %s -p | -r " %(sys.argv[0]))
-    print("\t -p ifile ofile : calculate the prefix number.")
-    print("\t -r ifile ofile start end: generate rib file with random nexthop.")
+    print("\t -p ifile [ofile] : calculate the prefix number.")
+    print("\t -r ifile [ofile] : generate rib file from output using bgpdum with -M flags.")
+    print("\t -n ifile ofile start end: generate rib file with random nexthop from bgpdum with -M flags file.")
     print("")
     pass
     
@@ -129,8 +139,21 @@ if __name__ == '__main__':
             print("Calculation of prefix number  finished!")
             pass
         elif(cmd=="-r"):
-            if( (ll!=4) or (ll!=6) ):
+            if( ll<3 ):
                 print("Error parameter.")
+            ofile = None
+            if( ll>=4 ):
+                ofile = sys.argv[3]
+            genRibFile(sys.argv[2],ofile)
+            pass
+        elif(cmd=="-n"):
+            if( ll<6 ):
+                print("Error parameter.")
+            ifile=sys.argv[2]
+            ofile=sys.argv[3]
+            start = int(sys.argv[4])
+            end = int(sys.argv[5])
+            genRibFileWithNHop(ifile,ofile,start,end)
             pass
         else:
             Usage()
