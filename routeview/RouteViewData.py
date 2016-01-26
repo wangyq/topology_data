@@ -90,7 +90,7 @@ class RouteViewData:
                 file6.write(nets[0] + " " + nets[1] + " " + nhop + "\n")
             else:
                 #file4.write(subnet+'\n')
-                file4.write(nets[0] + " " + nets[1] + " " + nhop + "\n")
+                file4.write(nets[0] + "/" + nets[1] + " " + nhop + "\n")
         pass
 
         ifile.close()
