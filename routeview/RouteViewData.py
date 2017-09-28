@@ -12,7 +12,8 @@ __license__ = 'MIT'
 import sys,random
 
 """
-Format of the data file which is processed here is generated from bgpdump using flag of "-M", such as "bgpdump -M ribfile > datafile"
+Format of the data file which is processed here is generated from bgpdump using flag of "-M", 
+    such as "bgpdump -M routeview4-rib.20170228.0400 > datafile.txt"
 """
 class RouteViewData:
     def __init__(self, datafile,outfile=None):
